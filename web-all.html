@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <script src="animate.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+        }
+        body{
+            background-color: blanchedalmond;
+        }
+        ul,li{
+            list-style: none;
+            text-align: center;
+        }
+        #one{
+            height: 30px;
+            border: 1px solid red;
+        }
+        #two{
+            height: 100px;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #three{
+            width: 1200px;
+            height: 50px;
+            margin: auto;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+        }
+        .thr>li{
+            float: left;
+            cursor: pointer;
+            margin: 0 120px;
+            padding-top: 15px;
+            border-radius: 50%;
+
+        }
+        .thr>li>a{
+            text-decoration: none;
+            color: black;
+        }
+        .box{
+            width:1200px;
+            height: 500px;
+            margin: 10px auto;
+           
+            position: relative;
+            overflow: hidden;
+        }
+        .slider{
+            width:8400px;
+            position: absolute;
+            left: -1200px;
+        }
+        
+        .slide{
+            width: 1200px;
+            overflow: hidden;
+            float: left;
+        }
+        .box>span{
+            display: block;
+            width: 30px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
+            color:white;
+            top: 175px;
+            line-height: 50px;
+            background:silver;
+            font-size: 30px;
+            position: absolute;
+            /* display:none; */
+            opacity: 0;
+        }
+        #left{
+            left: 30px;
+        }
+        #right{
+            right: 30px;
+        }
+        .nav{
+            position: absolute;
+            left:500px;
+            bottom: 20px;
+        }
+        .nav>li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            cursor: pointer;
+            margin: 0 10px;
+            border-radius: 50%;
+        }
+        .nav .active{
+            background:snow;
+        }
+       #four{
+           width: 1200px;
+           height: 400px;
+           margin: auto;
+           border-top: 2px solid black;
+           border-bottom: 2px solid black;
+           font-family:Verdana, Geneva, Tahoma, sans-serif;
+           font-size:large;
+           padding-left: 20px;
+           color:slategray;
+       }
+       #ig>img{
+           width:350px;
+           height: 350px;
+           border: 4px solid skyblue;
+           margin-top: 10px;
+           margin-left: 20px;
+       }
+       #five{
+           width: 1200px;
+           height: 50px;
+           margin: auto;
+           padding-left: 20px;
+           padding-top: 10px;
+           color: black;
+           font-size: large;
+       }
+       #six{
+           width: 1200px;
+           height: 400px;
+           margin: auto;
+           border-top: 2px solid;
+           border-bottom: 2px solid;
+
+       }
+       #six>img{
+            width:350px;
+           height: 350px;
+           border: 4px solid mediumaquamarine;
+           margin-top: 10px;
+           margin-left: 20px;
+
+       }
+       #seven{
+           text-align: center;
+           color: burlywood;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+       }
+       #al-1{
+           width: 1200px;
+           height: 400px;
+           margin: auto;
+           border-top:2px solid black;
+       }
+       #p{
+			width: 350px;
+			height: 350px;
+			background:url(images/02-1-1.jpg) no-repeat; 
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+
+		}
+        .p{
+			width: 350px;
+			height: 350px;
+			background:url(images/02-1-1.jpg) no-repeat; 
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+
+		}
+        #mask-1{
+            width:350px;
+            height:350px;
+            background-color:white;
+            opacity: 0.2;
+            z-index: 1000;
+            margin-top:-350px;
+        }
+        #p-1{
+			width: 350px;
+			height: 57px;
+			color:#ffffff;
+			text-align: center;
+			background-color: rgba(76,76,76,1);
+			opacity: 0.7;
+			margin-top: 293px;
+			font-size: 14.83px;
+		}
+        #p-1>p{
+            padding: 3px;
+        }
+
+		#i{
+			width: 350px;
+			height: 350px;
+			background:url(images/01-3-3.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+
+		}
+        .i{
+			width: 350px;
+			height: 350px;
+			background:url(images/01-3-3.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+
+		}
+        #i-1{
+			width: 350px;
+			height: 57px;
+			color:#ffffff;
+			text-align: center;
+			background-color: rgba(76,76,76,1);
+			opacity: 0.7;
+			margin-top: 293px;
+			font-size: 14.83px;
+		}
+        #i-1>p{
+            padding: 3px;
+        }
+
+		#q{
+			width: 350px;
+			height: 350px;
+			background:url(images/07-1-1.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+
+		}
+        .q{
+			width: 350px;
+			height: 350px;
+			background:url(images/07-1-1.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+
+		}
+        #q-1{
+			width: 350px;
+			height: 57px;
+			color:#ffffff;
+			text-align: center;
+			background-color: rgba(76,76,76,1);
+			opacity: 0.7;
+			margin-top: 293px;
+			font-size: 14.83px;
+		}
+        #q-1>p{
+            padding: 3px;
+        }
+
+        #al-2{
+           width: 1200px;
+           height: 400px;
+           margin: auto;
+       }
+		#t{
+			width: 350px;
+			height: 350px;
+			background:url(images/07-3-3.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+            margin-top: -8px;
+
+		}
+        .t{
+			width: 350px;
+			height: 350px;
+			background:url(images/07-3-3.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+            margin-top: -8px;
+
+		}
+        #t-1{
+			width: 350px;
+			height: 57px;
+			color:#ffffff;
+			text-align: center;
+			background-color: rgba(76,76,76,1);
+			opacity: 0.7;
+			margin-top: 293px;
+			font-size: 14.83px;
+		}
+        #t-1>p{
+            padding: 3px;
+        }
+
+		#u{
+			width: 350px;
+			height: 350px;
+			background:url(images/01-1-1.jpg) no-repeat;
+			border:1px solid black; 
+            float: left;
+            margin: 16px;
+            margin-top: -8px;
+		}
+        .u{
+			width: 350px;
+			height: 350px;
+			background:url(images/01-1-1.jpg) no-repeat;
+			border:1px solid black; 
+            float: left;
+            margin: 16px;
+            margin-top: -8px;
+		}
+        #u-1{
+			width: 350px;
+			height: 57px;
+			color:#ffffff;
+			text-align: center;
+			background-color: rgba(76,76,76,1);
+			opacity: 0.7;
+			margin-top: 293px;
+			font-size: 14.83px;
+		}
+        #u-1>p{
+            padding: 3px;
+        }
+	
+		#r{
+			width: 350px;
+			height: 350px;
+			background:url(images/03-1-1.jpg) no-repeat;
+			border:1px solid black; 
+            float: left;
+            margin: 16px;
+            margin-top: -8px;
+
+		}
+        .r{
+			width: 350px;
+			height: 350px;
+			background:url(images/03-1-1.jpg) no-repeat;
+			border:1px solid black; 
+            float: left;
+            margin: 16px;
+            margin-top: -8px;
+
+		}
+        #r-1{
+			width: 350px;
+			height: 57px;
+			color:#ffffff;
+			text-align: center;
+			background-color: rgba(76,76,76,1);
+			opacity: 0.7;
+			margin-top: 293px;
+			font-size: 14.83px;
+		}
+        #r-1>p{
+            padding: 3px;
+        }
+
+        #al-3{
+           width: 1200px;
+           height: 400px;
+           margin: auto;
+           border-bottom: 2px solid black;
+       }
+		#e{
+			width: 350px;
+			height: 350px;
+			background:url(images/06-1-1.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+            margin-top: -32px;
+ 
+		}
+        .e{
+			width: 350px;
+			height: 350px;
+			background:url(images/06-1-1.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+            margin-top: -32px;
+ 
+		}
+        #e-1{
+			width: 350px;
+			height: 57px;
+			color:#ffffff;
+			text-align: center;
+			background-color: rgba(76,76,76,1);
+			opacity: 0.7;
+			margin-top: 293px;
+			font-size: 14.83px;
+		}
+        #e-1>p{
+            padding: 3px;
+        }
+
+		#s{
+			width: 350px;
+			height: 350px;
+			background:url(images/01-4-4.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+            margin-top: -32px;
+
+		}
+        .s{
+			width: 350px;
+			height: 350px;
+			background:url(images/01-4-4.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+            margin-top: -32px;
+
+		}
+        #s-1{
+			width: 350px;
+			height: 57px;
+			color:#ffffff;
+			text-align: center;
+			background-color: rgba(76,76,76,1);
+			opacity: 0.7;
+			margin-top: 293px;
+			font-size: 14.83px;
+		}
+        #s-1>p{
+            padding: 3px;
+        }
+
+        #ss{
+			width: 350px;
+			height: 350px;
+			background:url(images/06-1-2.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+            margin-top: -32px;
+		}
+        .ss{
+			width: 350px;
+			height: 350px;
+			background:url(images/06-1-2.jpg) no-repeat;
+			border:1px solid black;
+            float: left;
+            margin: 16px;
+            margin-top: -32px;
+		}
+        #ss-1{
+			width: 350px;
+			height: 57px;
+			color:#ffffff;
+			text-align: center;
+			background-color: rgba(76,76,76,1);
+			opacity: 0.7;
+			margin-top: 293px;
+			font-size: 14.83px;
+		}
+        #ss-1>p{
+            padding: 3px;
+        }
+        #last{
+            height: 150px;
+            margin: auto;
+            background-color:snow;
+        }
+        #fff{
+            width: 1100px;
+            height: 96px;
+            margin-left: 40px;
+        }
+        #four-1{
+			width: 258px;
+			height: 52px;
+			margin-top: 50px;
+			background: url(images/f1.png) no-repeat 44px;
+			margin-left:50px;
+			border-right:1px solid #e2e2e2;
+			float: left;
+		}
+		#four-1>p{
+			margin-left: 115px;
+			margin-top:5px;
+			font-size: 19px;
+			color: #333333;
+		}
+		#four-1>span{
+			margin-left: 115px;
+			font-size: 13px;
+			color: #333333;
+		}
+		#four-2{
+			width: 268px;
+			height: 57px;
+			margin-top:50px;
+			background: url(images/f2.png) no-repeat 44px;
+			margin-left: -8px;
+			border-right:1px solid #e2e2e2;
+			float: left;
+		}
+		#four-2>p{
+			margin-left: 115px;
+			margin-top: 5px;
+			font-size: 19px;
+			color: #333333;
+		}
+		#four-2>span{
+			margin-left: 115px;
+			font-size: 13px;
+			color: #333333;
+		}
+		#four-3{
+			width: 260px;
+			height: 60px;
+			margin-top: 50px;
+			background: url(images/f3.png) no-repeat 44px;
+			margin-left: -8px;
+			border-right:1px solid #e2e2e2;
+			float: left;
+		}
+		#four-3>p{
+			margin-left: 115px;
+			margin-top: 5px;
+			font-size: 19px;
+			color: #333333;
+		}
+		#four-3>span{
+			margin-left: 115px;
+			font-size: 13px;
+			color: #333333;
+		}
+		#four-4{
+			width: 268px;
+			height: 61px;
+			margin-top: 50px;
+			background: url(images/f4.png) no-repeat 44px;
+			margin-left: -8px;
+			float: left;
+		}
+		#four-4>p{
+			margin-left: 115px;
+			margin-top: 5px;
+			font-size: 19px;
+			color: #333333;
+		}
+		#four-4>span{
+			margin-left: 115px;
+			font-size: 13px;
+			color: #333333;
+		}
+        #lastest{
+            width: 1261px;
+			height: 99px;
+			background-color: #323232;
+            border:1px solid #fff;
+            display: inline-block;
+		}
+		#lastest>a{
+			padding-left: 338px;
+			position: absolute;
+			margin-top: 25px;
+			color:#ffffff;
+			font-size: 14px;
+			text-decoration: none;
+		}
+		#lastest>p{
+			text-align: center;
+			padding-top: 50px;
+			color: #ffffff;
+			font-size: 14px;
+		}
+    </style>
+</head>
+<body>
+    <div id="one"></div>
+    <div id="two">
+        <h1>MIIELL CLOTH.com</h1>
+    </div>
+    <div id="three">
+        <ul class="thr">
+            <li><a href="#aa" onclick="aaa()"> products 新品上市</a></li>
+            <li><a href="#sss">percent 九折起</a> </li>
+            <li><a href="#kk" onclick="kkk()">All 全部商品</a></li>
+        </ul>
+    </div>
+    <div class="box" id="box">
+        <div class="slider" id="slider">
+            <div class="slide"><img src="images/5-5.jpg" alt=""/></div>
+            <div class="slide"><img src="images/1-1.jpg" alt=""/></div>
+            <div class="slide"><img src="images/2-2.jpg" alt=""/></div>
+            <div class="slide"><img src="images/3-3.jpg" alt=""/></div>
+            <div class="slide"><img src="images/1-1.jpg" alt=""/></div>
+            <div class="slide"><img src="images/5-5.jpg" alt=""/></div>
+            <div class="slide"><img src="images/1-1.jpg" alt=""/></div>
+            
+        </div>
+        <span id="left"><</span>
+        <span id="right">></span>
+        <ul class="nav" id="nav">
+            <li class="active"></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+        </ul>
+    </div>
+    </div>
+    <div id="four">
+        <p id="aaa">New products</p>
+        <div id="ig">
+            <img src="images/02.jpg" alt="" id="img1"/>
+            <img src="images/03-1.jpg" alt="" id="img2"/>
+            <img src="images/06-1.jpg" alt="" id="img3"/>
+        </div>
+        
+    </div>
+    <div id="five">
+        <p id="sss">Ninety percent</p>
+    </div>
+    <div id="six">
+        <img src="images/01-4.jpg" id="img4">
+        <img src="images/07-1.jpg" id="img5">
+        <img src="images/07-2.jpg" id="img6">
+    </div>
+    <div id="seven">
+        <h1 id="kkk">ALL 全部商品</h2>
+    </div>
+    <div id="al-1">
+        <div id="p" class="p">
+            <div id="p-1">
+                <p>￥&nbsp;399.00</p>
+                <p>加绒韩版卫衣</p>
+            </div>
+        </div>
+        
+        <div id="i" class="i">
+            <div id="i-1">
+                <p>￥&nbsp;198.00</p>
+                <p>新款宽松运动加绒卫衣</p>
+            </div>
+        </div>
+        <div id="q" class="q">
+            <div id="q-1">
+                <p>￥&nbsp;199.00</p>
+                <p>女子卫衣2019冬季新款</p>
+            </div>
+        </div>
+    </div>
+    <div id="al-2">
+        <div id="t" class="t">
+            <div id="t-1">
+                <p>￥&nbsp;599.00</p>
+                <p>联名ins加绒连帽bf卫衣</p>
+            </div>
+        </div>
+        <div id="u" class="u">
+            <div id="u-1">
+                <p>￥&nbsp;199.00</p>
+                <p>新款宽松加绒卫衣</p>
+            </div>
+        </div>
+        <div id="r" class="r">
+            <div id="r-1">
+                <p>￥&nbsp;499.00</p>
+                <p>ins运动风宽松韩版卫衣女</p>
+            </div>
+        </div>
+    </div>
+    <div id="al-3">
+        <div id="e" class="e">
+            <div id="e-1">
+                <p>￥&nbsp;198.00</p>
+                <p>新款卫衣韩版2019春秋薄款</p>
+            </div>
+        </div>
+        <div id="s" class="s">
+            <div id="s-1">
+                <p>￥&nbsp;199.00</p>
+                <p>2019冬季新款宽松运动加绒卫衣</p>
+            </div>
+        </div>
+        <div id="ss" class="ss">
+            <div id="ss-1">
+                <p>￥&nbsp;199.00</p>
+                <p>冬季新款宽松运动加绒卫衣</p>
+            </div>
+        </div>
+    </div>
+    <div id="last">
+        <div id="fff">
+			<div id="four-1">
+				<p>资质认证</p>
+				<span>服务商100%实名认证</span>
+			</div>
+			<div id="four-2">
+				<p>支付安全</p>
+				<span>明码标价支付及信息安全</span>
+			</div>
+			<div id="four-3">
+				<p>保险赔付</p>
+				<span>为您提供担保赔付</span>
+			</div>
+			<div id="four-4">
+				<p>售后无忧</p>
+				<span>服务出问题经理全程跟进</span>
+			</div>
+		</div>
+    </div>
+    <div id="lastest">
+        <a href="#">首页&nbsp;|&nbsp;工商代理&nbsp;|&nbsp;财务代记账&nbsp;|&nbsp;股权交易与变更&nbsp;|&nbsp;企业贷款&nbsp;&nbsp;办公室租赁&nbsp;|&nbsp;社保公积金代理&nbsp;|&nbsp;法律服务</a>
+		<p>@ 2017-2018 买猜商城有限公司 版权所有</p>
+    </div>
+</body>
+<script>
+    //轮播图
+    var box=document.getElementById("box");
+    var nav=document.getElementById("nav").children;
+    var slider=document.getElementById("slider");
+    var left=document.getElementById("left");
+    var right=document.getElementById("right");
+    var index=1;
+    var timer;
+    var isMoving=false;
+    var ig=document.getElementById("ig");
+    //轮播下一张
+    function next(){
+    if(isMoving){
+        return;
+    }
+    isMoving=true;
+    index++;
+    navChange();
+    animate(slider,{left:-1200*index},function(){
+        if(index===6){
+            slider.style.left="-1200px";
+            index=1;
+        }
+        isMoving=false;
+    });
+    
+    }
+
+    function prev(){
+    if(isMoving){
+        return;
+    }
+    isMoving=true;
+    index--;
+    navChange();
+    animate(slider,{left:-1200*index},function(){
+        if(index===0){
+            slider.style.left="-6000px";
+            index=5;
+        }
+        isMoving=false;
+    });
+    }
+
+
+    var timer=setInterval(next,3000);
+//鼠标划入清定时器
+    box.onmouseover=function(){
+        animate(left,{opacity:50});
+        animate(right,{opacity:50});
+        clearInterval(timer);
+        }
+//鼠标划出开定时器
+    box.onmouseout=function(){
+        animate(left,{opacity:0});
+        animate(right,{opacity:0});
+        timer=setInterval(next,3000);
+    }
+    right.onclick=next;
+    left.onclick=prev;
+    for(var i=0;i<nav.length;i++){
+        nav[i].value=i;
+        nav[i].onclick=function(){
+            index=this.value+1;
+            navChange();
+            animate(slider,{left:-1200*index});
+
+        }
+    }
+    function navChange(){
+        for(var i=0;i<nav.length;i++){
+            nav[i].className='';
+        }
+        if(index>5){
+            nav[0].className='active';
+        }
+        else if(index<=0){
+            nav[4].className='active';
+        }
+        else{
+            nav[index-1].className='active';
+        }
+    }
+//点击文字切换到指定位置
+    function aaa(){
+        window.location.hash="#aaa";
+    }
+    function kkk(){
+        window.location.hash="#kkk";
+    }
+//鼠标经过切换图片
+window.onload=function(){
+   var img1=document.getElementById("img1");
+   var img2=document.getElementById("img2");
+   var img3=document.getElementById("img3");
+   var img4=document.getElementById("img4");
+   var img5=document.getElementById("img5");
+   var img6=document.getElementById("img6");
+   
+   img1.onmouseover=function(){
+       this.src="images/02-2.jpg";
+   }
+   img2.onmouseover=function(){
+       this.src="images/03.jpg"
+   }
+   img3.onmouseover=function(){
+       this.src="images/06.jpg";
+   }
+   img4.onmouseover=function(){
+       this.src="images/01-3.jpg"
+   }
+   img5.onmouseover=function(){
+       this.src="images/07.jpg"
+   }
+   img6.onmouseover=function(){
+       this.src="images/07-3.jpg"
+   }
+   img1.onmouseout=function(){
+       this.src="images/02.jpg";
+   }
+   img2.onmouseout=function(){
+       this.src="images/03-1.jpg";
+   }
+   img3.onmouseout=function(){
+       this.src="images/06-1.jpg";
+   }
+   img4.onmouseout=function(){
+       this.src="images/01-4.jpg";
+   }
+   img5.onmouseout=function(){
+       this.src="images/07-1.jpg";
+   }
+   img6.onmouseout=function(){
+       this.src="images/07-2.jpg";
+   }
+}
+//鼠标悬浮经过图片显示边框
+var p=document.getElementById("p");
+p.onmouseover=function(){
+   this.style.border="2px solid red";
+}
+p.onmouseout=function(){
+   this.style.border="1px solid black";
+}
+var i=document.getElementById("i");
+i.onmouseover=function(){
+   this.style.border="2px solid red";
+}
+i.onmouseout=function(){
+   this.style.border="1px solid black";
+}
+var q=document.getElementById("q");
+q.onmouseover=function(){
+   this.style.border="2px solid red";
+}
+q.onmouseout=function(){
+   this.style.border="1px solid black";
+}
+var t=document.getElementById("t");
+t.onmouseover=function(){
+   this.style.border="2px solid red";
+}
+t.onmouseout=function(){
+   this.style.border="1px solid black";
+}
+var u=document.getElementById("u");
+u.onmouseover=function(){
+   this.style.border="2px solid red";
+}
+u.onmouseout=function(){
+   this.style.border="1px solid black";
+}
+var r=document.getElementById("r");
+r.onmouseover=function(){
+   this.style.border="2px solid red";
+}
+r.onmouseout=function(){
+   this.style.border="1px solid black";
+}
+var e=document.getElementById("e");
+e.onmouseover=function(){
+   this.style.border="2px solid red";
+}
+e.onmouseout=function(){
+   this.style.border="1px solid black";
+}
+var s=document.getElementById("s");
+s.onmouseover=function(){
+   this.style.border="2px solid red";
+}
+s.onmouseout=function(){
+   this.style.border="1px solid black";
+}
+var ss=document.getElementById("ss");
+ss.onmouseover=function(){
+   this.style.border="2px solid red";
+}
+ss.onmouseout=function(){
+   this.style.border="1px solid black";
+}
+//遮罩层效果
+var pic=document.getElementsByClassName("ss")[0];
+var d=document.createElement("div");
+pic.onmouseenter=function(){
+    d.id="mask-1";
+    pic.appendChild(d);
+};
+pic.onmouseleave=function(){
+    this.removeChild(d);
+}; 
+
+var p1=document.getElementsByClassName("p")[0];
+var a=document.createElement("div");
+p1.onmouseenter=function(){
+    a.id="mask-1";
+    p1.appendChild(a);
+}
+p1.onmouseleave=function(){
+    this.removeChild(a);
+}
+
+var p2=document.getElementsByClassName("i")[0];
+var a2=document.createElement("div");
+p2.onmouseenter=function(){
+    a2.id="mask-1";
+    p2.appendChild(a2);
+}
+p2.onmouseleave=function(){
+    this.removeChild(a2);
+}
+var p3=document.getElementsByClassName("q")[0];
+var a3=document.createElement("div");
+p3.onmouseenter=function(){
+    a3.id="mask-1";
+    p3.appendChild(a3);
+}
+p3.onmouseleave=function(){
+    this.removeChild(a3);
+}
+var p4=document.getElementsByClassName("t")[0];
+var a4=document.createElement("div");
+p4.onmouseenter=function(){
+    a4.id="mask-1";
+    p4.appendChild(a4);
+}
+p4.onmouseleave=function(){
+    this.removeChild(a4);
+}
+var p5=document.getElementsByClassName("u")[0];
+var a5=document.createElement("div");
+p5.onmouseenter=function(){
+    a5.id="mask-1";
+    p5.appendChild(a5);
+}
+p5.onmouseleave=function(){
+    this.removeChild(a5);
+}
+var p6=document.getElementsByClassName("r")[0];
+var a6=document.createElement("div");
+p6.onmouseenter=function(){
+    a6.id="mask-1";
+    p6.appendChild(a6);
+}
+p6.onmouseleave=function(){
+    this.removeChild(a6);
+}
+var p7=document.getElementsByClassName("e")[0];
+var a7=document.createElement("div");
+p7.onmouseenter=function(){
+    a7.id="mask-1";
+    p7.appendChild(a7);
+}
+p7.onmouseleave=function(){
+    this.removeChild(a7);
+}
+var p8=document.getElementsByClassName("s")[0];
+var a8=document.createElement("div");
+p8.onmouseenter=function(){
+    a8.id="mask-1";
+    p8.appendChild(a8);
+}
+p8.onmouseleave=function(){
+    this.removeChild(a8);
+}
+
+
+    
+
+</script>
+</html>
